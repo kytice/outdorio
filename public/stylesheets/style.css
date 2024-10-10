@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Syne:wght@700&display=swap");
+
+/*:root {
+  --primary-color: #77bbff;
+  --secondary-color: #b9e6eb;
+  --accent-color: #49a42b;
+  --text-color: #000;
+  --light-text-color: #aaa;
+  --border-color: #a2ced3;
+}*/
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover; /* Make the image cover the entire background */
+  background-position: center; /* Center the image */
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-optical-sizing: auto;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Syne", sans-serif;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.navbar {
+  background-color: var(--accent-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: "Syne", sans-serif;
+}
+
+.nav-link {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--border-color);
+}
+
+.nav-link.active {
+  color: var(--border-color);
+}
+.text-center {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem; /* Add some padding for better readability */
+  border-radius: 20px; /* Optional: rounded corners */
+}
+/* styles.css */
+
+footer {
+  margin: auto 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Light grey background */
+  color: #343a40; /* Dark text color */
+  text-align: center; /* Centered text */
+  padding: 10px; /* Smaller padding for a compact footer */
+  position: relative; /* Ensure proper stacking context */
+  bottom: 0; /* Stick to the bottom if needed */
+  width: 100%; /* Full width */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+}
+
+/* Responsive adjustment for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

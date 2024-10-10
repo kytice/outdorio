@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    // Navbar
+    nav.navbar.navbar-expand.bg-body-tertiary
+      .container-fluid
+        a.navbar-brand(aria-current="page", href="/") outdorio
+        ul.navbar-nav.ms-auto.d-flex.align-items-center
+          if user
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="#", id="navbarDropdown", role="button", data-bs-toggle="dropdown", aria-expanded="false") #{user.username}
+              ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                li
+                  a.dropdown-item(href="/auth/logout") Logout
+          else
+            li.nav-item
+              a.nav-link(href="/register") Register
+            li.nav-item
+              a.nav-link(href="/login") Login
+
+    // Main content
+    main
+      block content
+    
+    // Footer
+    footer
+      p outdorio © 2024
+
+    // Bootstrap JS for interactive components
+    script(src='/javascripts/bootstrap.bundle.min.js')
